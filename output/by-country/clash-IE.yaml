@@ -1,0 +1,61 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇪 IE 01 - xiaohe
+  type: ss
+  server: 20.234.82.250
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: kYhF4RWqohTpbVau
+  udp: true
+- name: 🇮🇪 IE 02 - xiaohe
+  type: ss
+  server: 20.234.82.250
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: R2QvJ9exeq61wfSV
+  udp: true
+- name: 🇮🇪 IE 03 - xiaohe
+  type: vless
+  server: fq.jp188.dpdns.org
+  port: 443
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fq.jp188.dpdns.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fq.jp188.dpdns.org
+- name: 🇮🇪 IE 04 - xiaohe
+  type: ss
+  server: 20.234.82.250
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: D1VXfiP9b9VeX9ZD
+  udp: true
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇪 IE 01 - xiaohe
+  - 🇮🇪 IE 02 - xiaohe
+  - 🇮🇪 IE 03 - xiaohe
+  - 🇮🇪 IE 04 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇪 IE 01 - xiaohe
+  - 🇮🇪 IE 02 - xiaohe
+  - 🇮🇪 IE 03 - xiaohe
+  - 🇮🇪 IE 04 - xiaohe
+rules:
+- MATCH,PROXIES
