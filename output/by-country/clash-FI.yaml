@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
+  type: vless
+  server: 188.132.237.20
+  port: 2095
+  uuid: 3b9e513e-30d9-4ca8-8340-8f33fc6710de
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇫🇮 FI 02 - xiaohe
   type: ss
   server: 65.109.215.118
   port: 1080
@@ -17,11 +25,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇮 FI 01 - xiaohe
+  - 🇫🇮 FI 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 FI 01 - xiaohe
+  - 🇫🇮 FI 02 - xiaohe
 rules:
 - MATCH,PROXIES
