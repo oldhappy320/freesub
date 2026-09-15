@@ -6,37 +6,21 @@ log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   type: vless
-  server: shop.neexbyte.ir
-  port: 8443
-  uuid: 464bc502-f963-45b6-81e3-e33d18427506
+  server: turkyea.vanguardia.ir
+  port: 37446
+  uuid: 960e6852-9d2b-48bb-b1cf-5cb27ec27473
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: shop.neexbyte.ir
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shop.neexbyte.ir
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   type: vless
-  server: 151.241.226.201
-  port: 2053
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  server: turkyea.vanguardia.ir
+  port: 33138
+  uuid: 960e6852-9d2b-48bb-b1cf-5cb27ec27473
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  type: ss
-  server: 188.132.174.236
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: rSeYcig_XBy8q3k33NpK3A
-  udp: true
+  servername: turkyea.vanguardia.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +28,6 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -52,6 +35,5 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
 rules:
 - MATCH,PROXIES
