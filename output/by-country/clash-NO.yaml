@@ -22,7 +22,19 @@ proxies:
   reality-opts:
     public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
   servername: bowandbead.com
-  client-fingerprint: qq
+  client-fingerprint: chrome
+- name: 🇳🇴 NO 03 - xiaohe
+  type: vless
+  server: 46.29.238.88
+  port: 40443
+  uuid: db320947-adfb-400d-b60b-383b8324bffe
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
+  servername: deepl.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -30,6 +42,7 @@ proxy-groups:
   - AUTO
   - 🇳🇴 NO 01 - xiaohe
   - 🇳🇴 NO 02 - xiaohe
+  - 🇳🇴 NO 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -37,5 +50,6 @@ proxy-groups:
   proxies:
   - 🇳🇴 NO 01 - xiaohe
   - 🇳🇴 NO 02 - xiaohe
+  - 🇳🇴 NO 03 - xiaohe
 rules:
 - MATCH,PROXIES
