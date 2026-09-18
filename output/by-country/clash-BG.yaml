@@ -6,8 +6,8 @@ log-level: info
 proxies:
 - name: 🇧🇬 BG 01 - xiaohe
   type: vless
-  server: 64.227.67.161
-  port: 2083
+  server: 132.243.203.207
+  port: 8443
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
@@ -15,7 +15,7 @@ proxies:
   servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /
+    path: /lives
     headers:
       Host: cdn8848.776676.xyz
 - name: 🇧🇬 BG 02 - xiaohe
@@ -30,13 +30,26 @@ proxies:
 - name: 🇧🇬 BG 03 - xiaohe
   type: vless
   server: 192.145.31.5
+  port: 443
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 192.145.31.5
+- name: 🇧🇬 BG 04 - xiaohe
+  type: vless
+  server: 192.145.31.5
   port: 8443
   uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
   udp: true
   tls: true
   skip-cert-verify: true
   servername: neth9.lunariai.ru
-- name: 🇧🇬 BG 04 - xiaohe
+- name: 🇧🇬 BG 05 - xiaohe
   type: vless
   server: 192.145.31.5
   port: 8443
@@ -54,6 +67,7 @@ proxy-groups:
   - 🇧🇬 BG 02 - xiaohe
   - 🇧🇬 BG 03 - xiaohe
   - 🇧🇬 BG 04 - xiaohe
+  - 🇧🇬 BG 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -63,5 +77,6 @@ proxy-groups:
   - 🇧🇬 BG 02 - xiaohe
   - 🇧🇬 BG 03 - xiaohe
   - 🇧🇬 BG 04 - xiaohe
+  - 🇧🇬 BG 05 - xiaohe
 rules:
 - MATCH,PROXIES
