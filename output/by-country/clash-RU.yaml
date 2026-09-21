@@ -6,8 +6,8 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 164.92.137.46
-  port: 2083
+  server: 31.59.121.156
+  port: 2053
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
@@ -15,7 +15,7 @@ proxies:
   servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: '%2Fbt%2Fstreaming%2Fad%3Fed%3D2560'
+    path: /
     headers:
       Host: cdn8848.776676.xyz
 proxy-groups:
