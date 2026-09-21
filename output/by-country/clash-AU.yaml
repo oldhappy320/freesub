@@ -15,7 +15,7 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 - name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
   type: vless
   server: 34.87.244.111
@@ -27,7 +27,7 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: safari
+  client-fingerprint: firefox
 - name: 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
   type: vless
   server: 34.87.244.111
@@ -39,7 +39,7 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: ios
 - name: 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
   type: vless
   server: 34.87.244.111
@@ -51,19 +51,21 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: qq
+  client-fingerprint: chrome
 - name: 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
   type: vless
-  server: 34.87.244.111
-  port: 443
-  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
+  server: 152.67.101.72
+  port: 23010
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+  servername: cdn8848.776676.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdn8848.776676.xyz
 - name: 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
   type: vless
   server: 34.87.244.111
@@ -75,7 +77,7 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: ios
+  client-fingerprint: random
 - name: 🇦🇺 澳大利亚 (Australia) 07 - xiaohe
   type: vless
   server: 34.87.244.111
@@ -87,8 +89,20 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: qq
 - name: 🇦🇺 澳大利亚 (Australia) 08 - xiaohe
+  type: vless
+  server: 34.87.244.111
+  port: 443
+  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 09 - xiaohe
   type: vless
   server: 34.87.244.111
   port: 443
@@ -113,6 +127,7 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 07 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 08 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -126,5 +141,6 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 07 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 08 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 09 - xiaohe
 rules:
 - MATCH,PROXIES
