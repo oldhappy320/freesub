@@ -20,6 +20,32 @@ proxies:
       Host: shuma.ccwu.cc
 - name: 🇵🇱 PL 02 - xiaohe
   type: vless
+  server: 188.114.97.6
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ?ed=2560
+    headers:
+      Host: a0hbm.jvb1.28f.hh.vavava.kdns.fr
+- name: 🇵🇱 PL 03 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇵🇱 PL 04 - xiaohe
+  type: vless
   server: 103.167.234.26
   port: 443
   uuid: c18b978e-1c4e-415c-8bea-07942b563a64
@@ -32,6 +58,60 @@ proxies:
     path: /
     headers:
       Host: shuma.ccwu.cc
+- name: 🇵🇱 PL 05 - xiaohe
+  type: vless
+  server: shuma.ccwu.cc
+  port: 443
+  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: shuma.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: shuma.ccwu.cc
+- name: 🇵🇱 PL 06 - xiaohe
+  type: vless
+  server: shuma.ccwu.cc
+  port: 443
+  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: shuma.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: shuma.ccwu.cc
+- name: 🇵🇱 PL 07 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇵🇱 PL 08 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +119,12 @@ proxy-groups:
   - AUTO
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
+  - 🇵🇱 PL 03 - xiaohe
+  - 🇵🇱 PL 04 - xiaohe
+  - 🇵🇱 PL 05 - xiaohe
+  - 🇵🇱 PL 06 - xiaohe
+  - 🇵🇱 PL 07 - xiaohe
+  - 🇵🇱 PL 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -46,5 +132,11 @@ proxy-groups:
   proxies:
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
+  - 🇵🇱 PL 03 - xiaohe
+  - 🇵🇱 PL 04 - xiaohe
+  - 🇵🇱 PL 05 - xiaohe
+  - 🇵🇱 PL 06 - xiaohe
+  - 🇵🇱 PL 07 - xiaohe
+  - 🇵🇱 PL 08 - xiaohe
 rules:
 - MATCH,PROXIES
