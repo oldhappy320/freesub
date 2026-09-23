@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   type: vless
-  server: 59.125.69.24
+  server: 60.248.219.54
   port: 443
   uuid: 06e177f7-240d-4687-bd85-235505801a5e
   udp: true
