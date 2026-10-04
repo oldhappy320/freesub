@@ -17,17 +17,32 @@ proxies:
     path: /ws
     headers:
       Host: aIs.SpEeDtEsT.nEt
+- name: 🇹🇭 TH 02 - xiaohe
+  type: vless
+  server: 172.66.140.62
+  port: 8880
+  uuid: 160ca353-676d-4b7f-a041-0289e388b865
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: proud-cloud-7bdd.208-a52.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇭 TH 01 - xiaohe
+  - 🇹🇭 TH 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇹🇭 TH 01 - xiaohe
+  - 🇹🇭 TH 02 - xiaohe
 rules:
 - MATCH,PROXIES
