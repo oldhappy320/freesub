@@ -4,45 +4,45 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 TH 01 - xiaohe
+- name: 🇵🇱 PL 01 - xiaohe
   type: vless
-  server: 103.86.49.57
+  server: 70.34.252.154
   port: 80
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  uuid: d9c7ec1f-5aa3-469a-b860-760c686806b0
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /ws
+    path: /
     headers:
-      Host: aIs.SpEeDtEsT.nEt
-- name: 🇹🇭 TH 02 - xiaohe
+      Host: 70.34.252.154
+- name: 🇵🇱 PL 02 - xiaohe
   type: vless
-  server: 103.86.49.57
+  server: 70.34.255.101
   port: 80
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  uuid: a889262f-5fe3-4c93-9aaa-3721318dd389
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /ws
+    path: /
     headers:
-      Host: aIs.SpEeDtEsT.nEt
+      Host: 70.34.255.101
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇭 TH 01 - xiaohe
-  - 🇹🇭 TH 02 - xiaohe
+  - 🇵🇱 PL 01 - xiaohe
+  - 🇵🇱 PL 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭 TH 01 - xiaohe
-  - 🇹🇭 TH 02 - xiaohe
+  - 🇵🇱 PL 01 - xiaohe
+  - 🇵🇱 PL 02 - xiaohe
 rules:
 - MATCH,PROXIES
