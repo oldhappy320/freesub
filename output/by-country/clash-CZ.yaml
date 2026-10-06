@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇨🇿 CZ 01 - xiaohe
   type: vless
-  server: 95.182.95.178
+  server: 138.124.58.39
   port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ccc.010304.xyz
+  servername: fzo5i.ir46.90k.hh.ov0.kdns.fr
   network: ws
   ws-opts:
-    path: /fp
+    path: /glasspanel/guest000_0_5de14443985f/
     headers:
-      Host: ccc.010304.xyz
+      Host: fzo5i.ir46.90k.hh.ov0.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
