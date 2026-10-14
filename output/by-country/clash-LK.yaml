@@ -7,11 +7,12 @@ proxies:
 - name: 🇱🇰 LK 01 - xiaohe
   type: vless
   server: free.sahanwickramasinghe.me
-  port: 80
-  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  port: 2096
+  uuid: 13d72f62-ca03-4f06-acc4-409f5dc2f4e6
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: microsoft.com
   network: ws
   ws-opts:
     path: /
@@ -20,12 +21,11 @@ proxies:
 - name: 🇱🇰 LK 02 - xiaohe
   type: vless
   server: free.sahanwickramasinghe.me
-  port: 2096
-  uuid: 13d72f62-ca03-4f06-acc4-409f5dc2f4e6
+  port: 80
+  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: microsoft.com
   network: ws
   ws-opts:
     path: /
