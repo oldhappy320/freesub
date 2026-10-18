@@ -5,12 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 CZ 01 - xiaohe
-  type: ss
-  server: 67.159.18.34
-  port: 17001
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+  type: vless
+  server: cl-glb6e059ee.gcdn.co
+  port: 443
+  uuid: 6206cb76-491d-4237-baf1-8c29eea4eafb
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: node-3.wt419.site
+  network: ws
+  ws-opts:
+    path: /qVnRkTxmLwBzHjYpFaDgUcSeNrKxMtVbWqZhPcLsJfGy
+    headers:
+      Host: node-3.wt419.site
 - name: 🇨🇿 CZ 02 - xiaohe
   type: vless
   server: cl-glb6e059ee.gcdn.co
@@ -46,6 +53,13 @@ proxies:
   cipher: aes-256-gcm
   password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
   udp: true
+- name: 🇨🇿 CZ 05 - xiaohe
+  type: ss
+  server: 67.159.18.34
+  port: 17001
+  cipher: aes-256-gcm
+  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,6 +69,7 @@ proxy-groups:
   - 🇨🇿 CZ 02 - xiaohe
   - 🇨🇿 CZ 03 - xiaohe
   - 🇨🇿 CZ 04 - xiaohe
+  - 🇨🇿 CZ 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -64,5 +79,6 @@ proxy-groups:
   - 🇨🇿 CZ 02 - xiaohe
   - 🇨🇿 CZ 03 - xiaohe
   - 🇨🇿 CZ 04 - xiaohe
+  - 🇨🇿 CZ 05 - xiaohe
 rules:
 - MATCH,PROXIES
