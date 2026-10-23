@@ -6,18 +6,16 @@ log-level: info
 proxies:
 - name: 🇺🇦 UA 01 - xiaohe
   type: vless
-  server: 213.111.148.137
+  server: netx.smrtai.top
   port: 443
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: proxy-1cu.pages.dev
-  network: ws
-  ws-opts:
-    path: /fp=android
-    headers:
-      Host: proxy-1cu.pages.dev
+  reality-opts:
+    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
