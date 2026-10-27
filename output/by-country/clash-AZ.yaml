@@ -4,29 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 BG 01 - xiaohe
+- name: 🇦🇿 AZ 01 - xiaohe
   type: vless
-  server: p11real3.greewebservices.ir
-  port: 2202
-  uuid: f234330e-f9df-46e3-8f60-b2af5173c147
+  server: 94.20.141.53
+  port: 443
+  uuid: f439e4fe-139b-4882-ad8b-a16176d09c88
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-  servername: play.googleapis.com
-  client-fingerprint: ios
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+  servername: eu63.cdn77.icu
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 BG 01 - xiaohe
+  - 🇦🇿 AZ 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 BG 01 - xiaohe
+  - 🇦🇿 AZ 01 - xiaohe
 rules:
 - MATCH,PROXIES
