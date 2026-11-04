@@ -4,30 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇰 LK 01 - xiaohe
+- name: 🇸🇪 SE 01 - xiaohe
   type: vless
-  server: support.zoom.us
-  port: 8080
-  uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
+  server: se3.shtil.io
+  port: 443
+  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: free.nadun.store
+  servername: se3.shtil.io
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇰 LK 01 - xiaohe
+  - 🇸🇪 SE 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇰 LK 01 - xiaohe
+  - 🇸🇪 SE 01 - xiaohe
 rules:
 - MATCH,PROXIES
