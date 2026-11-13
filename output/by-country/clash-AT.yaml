@@ -25,20 +25,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
   udp: true
-- name: 🇦🇹 AT 04 - xiaohe
-  type: vless
-  server: 193.219.97.198
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: fs.qicai99.com
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,7 +33,6 @@ proxy-groups:
   - 🇦🇹 AT 01 - xiaohe
   - 🇦🇹 AT 02 - xiaohe
   - 🇦🇹 AT 03 - xiaohe
-  - 🇦🇹 AT 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -56,6 +41,5 @@ proxy-groups:
   - 🇦🇹 AT 01 - xiaohe
   - 🇦🇹 AT 02 - xiaohe
   - 🇦🇹 AT 03 - xiaohe
-  - 🇦🇹 AT 04 - xiaohe
 rules:
 - MATCH,PROXIES
