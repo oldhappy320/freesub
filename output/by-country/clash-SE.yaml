@@ -5,16 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 SE 01 - xiaohe
-  type: vmess
-  server: 138.199.55.230
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+  type: ss
+  server: 138.199.55.243
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xmfhlpy.com
 - name: 🇸🇪 SE 02 - xiaohe
   type: vless
   server: 88.216.214.159
@@ -28,17 +24,16 @@ proxies:
   servername: api-svc-mgr.galioncc.com
   client-fingerprint: firefox
 - name: 🇸🇪 SE 03 - xiaohe
-  type: vless
-  server: 88.216.60.73
-  port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  type: vmess
+  server: 62.93.166.184
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-  servername: ns-api-gw.galioncc.com
-  client-fingerprint: firefox
+  servername: ''
 - name: 🇸🇪 SE 04 - xiaohe
   type: vmess
   server: 138.199.55.230
@@ -51,13 +46,30 @@ proxies:
   skip-cert-verify: true
   servername: ''
 - name: 🇸🇪 SE 05 - xiaohe
-  type: ss
-  server: 138.199.55.243
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  server: 88.216.60.73
+  port: 443
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
   udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+  servername: ns-api-gw.galioncc.com
+  client-fingerprint: ios
 - name: 🇸🇪 SE 06 - xiaohe
+  type: vless
+  server: 88.216.60.73
+  port: 443
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+  servername: ns-api-gw.galioncc.com
+  client-fingerprint: ios
+- name: 🇸🇪 SE 07 - xiaohe
   type: vless
   server: 5.178.109.174
   port: 14430
@@ -70,24 +82,23 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
-- name: 🇸🇪 SE 07 - xiaohe
-  type: vless
-  server: 88.216.60.73
-  port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+- name: 🇸🇪 SE 08 - xiaohe
+  type: vmess
+  server: 138.199.55.230
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-  servername: ns-api-gw.galioncc.com
-  client-fingerprint: ios
-- name: 🇸🇪 SE 08 - xiaohe
+  servername: ''
+- name: 🇸🇪 SE 09 - xiaohe
   type: ss
-  server: 70.34.212.124
+  server: 62.182.193.228
   port: 8388
-  cipher: aes-256-gcm
-  password: AxIYWtskJWIIaefW
+  cipher: chacha20-ietf-poly1305
+  password: 2e555e46dbc421452416834962fd014f
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -102,6 +113,7 @@ proxy-groups:
   - 🇸🇪 SE 06 - xiaohe
   - 🇸🇪 SE 07 - xiaohe
   - 🇸🇪 SE 08 - xiaohe
+  - 🇸🇪 SE 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -115,5 +127,6 @@ proxy-groups:
   - 🇸🇪 SE 06 - xiaohe
   - 🇸🇪 SE 07 - xiaohe
   - 🇸🇪 SE 08 - xiaohe
+  - 🇸🇪 SE 09 - xiaohe
 rules:
 - MATCH,PROXIES
