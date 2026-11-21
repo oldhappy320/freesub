@@ -12,13 +12,6 @@ proxies:
   password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
   udp: true
 - name: 🇦🇹 AT 02 - xiaohe
-  type: ss
-  server: 82.110.60.9
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇦🇹 AT 03 - xiaohe
   type: vmess
   server: 154.47.19.225
   port: 1270
@@ -29,6 +22,13 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: xmfhlpy.com
+- name: 🇦🇹 AT 03 - xiaohe
+  type: ss
+  server: 82.110.60.9
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 - name: 🇦🇹 AT 04 - xiaohe
   type: vmess
   server: 154.47.19.225
