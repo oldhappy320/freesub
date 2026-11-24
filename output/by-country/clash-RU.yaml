@@ -5,17 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: ss
-  server: 90.156.203.62
-  port: 5112
-  cipher: chacha20-ietf-poly1305
-  password: VVlAff77CnAU43Aoc5j15Y
+  type: vless
+  server: 136.148.83.70
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: aszbk-ru-78dc.my-fade.cloud
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
   server: 136.148.83.69
   port: 443
-  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
   udp: true
   tls: true
   skip-cert-verify: true
@@ -33,39 +35,26 @@ proxies:
   type: vless
   server: 136.148.83.69
   port: 443
-  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
   udp: true
   tls: true
   skip-cert-verify: true
   servername: szqbx-ru-77dc.my-fade.cloud
 - name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   type: vless
-  server: 136.148.83.69
+  server: 147.45.221.225
   port: 443
-  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: szqbx-ru-77dc.my-fade.cloud
+  servername: nl.lucheeebezlimitnoekino.stream
+  network: ws
+  ws-opts:
+    path: /media/ws/
+    headers:
+      Host: 147.45.221.225
 - name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
-  type: vless
-  server: 136.148.83.71
-  port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wccfu-ru-79dc.my-fade.cloud
-- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
-  type: vless
-  server: 136.148.83.69
-  port: 443
-  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: szqbx-ru-77dc.my-fade.cloud
-- name: 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
   type: vless
   server: 147.45.175.81
   port: 443
@@ -76,9 +65,27 @@ proxies:
   servername: xsru2.freeddns.org
   network: ws
   ws-opts:
-    path: wsru
+    path: /wsru
     headers:
       Host: xsru2.freeddns.org
+- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+  type: vless
+  server: 136.148.83.70
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: aszbk-ru-78dc.my-fade.cloud
+- name: 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
+  type: vless
+  server: 136.148.83.70
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: aszbk-ru-78dc.my-fade.cloud
 proxy-groups:
 - name: PROXIES
   type: select
