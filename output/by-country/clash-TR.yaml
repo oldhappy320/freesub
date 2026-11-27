@@ -15,17 +15,18 @@ proxies:
   servername: turkey-ip1.mmdaqaorg.xyz
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   type: vless
-  server: raha.ertebatgoostar.ir
-  port: 80
-  uuid: 8c49bed5-dbb2-4c0d-a2f1-2577b12c6c66
+  server: 172.67.199.12
+  port: 443
+  uuid: 963A4918-A630-29DA-A873-093CDF8AD784
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: still-bar-5702.vpnetwork3567.workers.dev
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: ''
+      Host: still-bar-5702.vpnetwork3567.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
